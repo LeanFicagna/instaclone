@@ -1,0 +1,214 @@
+* {
+    text-decoration: none !important;
+}
+
+.icon, .item {
+    color: #2d3748;
+}
+
+.divisor {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.item-insta {
+    display: inline-block;
+    margin: 0 30px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.publication {
+    width: 75%;
+    margin: 40px auto;
+}
+
+img-pub {
+    margin: 10px !important;
+}
+
+.item-insta.select {
+    border-top: 2px solid #718096;
+}
+
+.img-fundo-perfil {
+    margin: 10px 0;
+    background-color: #a0aec0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.img-perfil {
+    margin-left: -11px;
+    margin-right: -11px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.btn-edit-perfil {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #cbd5e0;
+}
+
+.user-perfil {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.name-perfil {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.liked {
+    color: crimson;
+}
+
+.icon:hover {
+    color: crimson;
+}
+
+body {
+    min-width: 300px;
+    background: #fafafa;
+}
+
+.container-home {
+    max-width: 70%;
+}
+
+.box + .box {
+    margin-top: 15px;
+}
+
+.box {
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 15px;
+}
+
+.box-header {
+    margin-bottom: 20px;
+}
+
+.box-content {
+    width: 80%;
+    margin: auto auto;
+}
+
+.box-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box-header h1 {
+    font-size: 24px;
+}
+
+input[type="text"], input[type="password"] {
+    background: #fefefe;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.btn-insta {
+    background: #3897f0;
+    color: #fff;
+    width: 100%;
+    height: auto;
+}
+
+.img-fluid {
+    max-width: 40%;
+}
+
+.bar-search {
+    width: 350px;
+}
+
+.icons {
+    padding: 20px;
+}
+
+.icon {
+    margin: 0 10px;
+}
+
+.card {
+    margin-top: 40px;
+}
+
+.card-header {
+    align-items: center;
+}
+
+.post-img-user {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+.name-user {
+    font-weight: bold;
+}
+
+.card-post .card-header span {
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+.card-body {
+    border: 1px solid #eee;
+}
+
+.post-image {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    background-color: #ddd;
+}
+
+.card-post .post-user-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.action-buttons {
+    margin-right: 20px;
+}
+
+.card-post .action-buttons .item {
+    font-weight: 400;
+    font-size: 14pt;
+    color: #2d3748;
+}
+
+.post-comments .comment .user{
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.post-comments .comment .text {
+    font-weight: 500;
+}
+
+.item:hover {
+    color: #3897f0;
+}
+
+#login {
+    margin-top: 30px;
+}
+
+#register {
+    margin-top: 10px;
+}

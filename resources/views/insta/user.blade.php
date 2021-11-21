@@ -46,8 +46,8 @@
         </div>
         <div class="row publication">
             @foreach($user->post()->get() as $post)
-                <div class="col-lg-4" style="padding: 2px!important;">
-                    <div class="post-image img-pub" data-img="/img/user_img/{{ $post->img }}"></div>
+                <div class="col-lg-4 bg-dark" style="padding: 0px;margin: 0px">
+                    <div class="col-12 post-image img-pub effect-img effect-img-perfil p-1" data-img="/img/user_img/{{ $post->img }}"></div>
                 </div>
             @endforeach
         </div>

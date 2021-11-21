@@ -16,7 +16,9 @@
                         <a class="name-user" href="/user/{{ $post->user()->first()->user }}" style="color: #1a202c">{{  $post->user()->first()->user }}</a>
                     </div>
 
-                    <div class="card-body post-image" data-img="/img/user_img/{{ $post->img }}"></div>
+                    <div class="bg-dark img-liked {{ (isset($post->postLike()->first()->user_id) && $post->postLike()->where('user_id', Auth::user()->id)->count() > 0)? 'reded': '' }}">
+                        <div class="card-body post-image effect-img" data-img="/img/user_img/{{ $post->img }}"></div>
+                    </div>
 
                     <div class="card-footer">
                         <div class="d-flex justify-content-start">
@@ -43,7 +45,7 @@
                             </div>
                         </div>
 
-                        <span class="test-bold item">{{ $post->postLike()->get()->count() }} curtidas</span>
+                        <span class="test-bold item-like">{{ $post->postLike()->get()->count() }}</span> curtidas
 
                         <div class="card-comment">
                             <div class="post-comments">

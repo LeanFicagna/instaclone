@@ -29,20 +29,19 @@ class InstaController extends Controller
     }
 
     public function like($post_id, $user_id) {
-        $postLike = PostLike::where(['user_id' => $post_id, 'post_id' => $user_id]);
-        if($postLike->count() == 0) {
+        $postLike = PostLike::where(['post_id' => $post_id, 'user_id' => $user_id])->first();
+        if($postLike == null) {
             $postLike = new PostLike();
             $postLike->user_id = $user_id;
             $postLike->post_id = $post_id;
             $postLike->save();
-            return json_encode(['like' => true]);
+            return json_encode(['like' => 'liked']);
         }
         $postLike->delete();
-        return json_encode(['like' => false]);
+        return json_encode(['like' => 'removed']);
     }
 
     public function comment(Request $request) {
-//        dd($request->user_id);
         $postComment = new PostComment();
         $postComment->comment = $request->comment;
         $postComment->user_id = $request->user_id;
@@ -77,6 +76,7 @@ class InstaController extends Controller
     }
 
     public function publication(Request $request) {
+        $request->validate(['descript' => 'required', 'img' => 'required']);
         $post = new Post();
         $post->descript = $request->descript;
         $post->user_id = $request->user_id;

@@ -20,5 +20,18 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
     <script src="{{ URL::to('js/app.js') }}"></script>
+
+    <div class="modal fade align-center" id="open-img" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin: auto auto">
+        <div class="modal-dialog" method="POST" action="{{ route('publication') }}" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="row modal-body">
+                    <button class="btn border col-1 prev"><</button>
+                    <div class=" col show-img" style="width: 1000px; height: 650px"></div>
+                    <button class="btn border col col-1 next">></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

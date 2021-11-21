@@ -95,4 +95,11 @@ class InstaController extends Controller
         return redirect()->back();
     }
 
+    public function search(Request $request) {
+        $users = User::where('user', 'LIKE', "%{$request->search}%")
+                            ->orWhere('name', 'LIKE', "%{$request->search}%")
+                            ->paginate();
+        return view('insta.paginated', ['users' => $users]);
+    }
+
 }

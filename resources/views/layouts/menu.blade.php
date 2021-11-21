@@ -8,8 +8,9 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             </ul>
-            <form class="d-flex bar-search">
-                <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search">
+            <form class="d-flex bar-search" method="post" action="search">
+                @csrf
+                <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search" id="search" name="search">
             </form>
             <div class="icons">
                 <a class="icon" href="/">

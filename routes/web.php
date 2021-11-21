@@ -40,4 +40,6 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('/public', [InstaController::class, 'publication'])->name('publication');
 
+    Route::post('/search', [InstaController::class, 'search'])->name('search');
+
 });

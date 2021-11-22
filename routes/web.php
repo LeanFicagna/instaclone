@@ -42,4 +42,6 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('/search', [InstaController::class, 'search'])->name('search');
 
+    Route::get('/follow/{user_id}/{user_follow}', [InstaController::class, 'follow'])->name('follow');
+
 });

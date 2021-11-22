@@ -1,7 +1,7 @@
 let arrayImg = [];
 let i;
 
-let arrayLike = []
+let arrayLike = [];
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -94,8 +94,4 @@ function changeImg(next) {
         }
     $('#open-img').modal('show');
     $('.show-img').css('background-image', 'url(' + arrayImg[i] + ')');
-}
-
-function requist(str) {
-
 }

@@ -20,7 +20,11 @@ class User extends Model implements Authenticatable
     }
 
     public function postComment() {
-        return $this->hasMany(PostLike::class, 'user_id', 'id');
+        return $this->hasMany(PostComment::class, 'user_id', 'id');
+    }
+
+    public function follow() {
+        return $this->hasMany(Follow::class, 'user_id', 'id');
     }
 
 }

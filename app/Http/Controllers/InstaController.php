@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Follow;
 use App\Models\Post;
 use App\Models\PostComment;
 use App\Models\PostLike;
@@ -100,6 +101,19 @@ class InstaController extends Controller
                             ->orWhere('name', 'LIKE', "%{$request->search}%")
                             ->paginate();
         return view('insta.paginated', ['users' => $users]);
+    }
+
+    public function follow($user_id, $user_follow) {
+        $follow = Follow::where(['user_id' => $user_id, 'user_follow' => $user_follow])->first();
+        if($follow == null) {
+            $follow = new Follow();
+            $follow->user_id = $user_id;
+            $follow->user_follow = $user_follow;
+            $follow->save();
+            return redirect()->back();
+        }
+        $follow->delete();
+        return redirect()->back();
     }
 
 }

@@ -10,7 +10,14 @@
         <div class="row d-flex justify-content-center ms-5">
             <div class="col-lg-3 img-fundo-perfil d-flex justify-content-center align-items-center">
                 @if($user->user_img != null)
-                    <img class="img-perfil" src="/img/user_img/{{ $user->user_img }}">
+                    <form action="{{ route('img.user') }}" method="POST" enctype="multipart/form-data" class="form-user">
+                        @csrf
+                        <label for="img-user">
+                            <img class="img-perfil" src="/img/user_img/{{ $user->user_img }}">
+                        </label>
+                        <input type="file" name="img" id="img-user" class="d-none">
+                        <input type="text" name="user" id="user" value="{{ $user->id }}" class="d-none">
+                    </form>
                 @else
                     <form action="{{ route('img.user') }}" method="POST" enctype="multipart/form-data" class="form-user">
                         @csrf
@@ -29,9 +36,14 @@
                 <span class="user-perfil">{{ $user->user }}</span>
                 <button class="btn btn-edit-perfil">Editar perfil</button>
                 <br><br>
-                <span><b>{{ $user->post()->get()->count() }}</b> publicações <b>0</b> seguidores <b>0</b> seguindo</span>
+                <span><b>{{ $user->post()->get()->count() }}</b> publicações <b>{{ $user->follow()->get()->count() }}</b> seguidores <b>{{ \App\Models\Follow::where(['user_follow' => $user->id])->get()->count() }}</b> seguindo</span>
                 <br><br>
                 <span class="name-perfil">{{ $user->name }}</span>
+                @if(Auth::user()->id != $user->id)
+                    <a href="{{ route('follow', ['user_id' => Auth::user()->id, 'user_follow' => $user->id]) }}">
+                        <button class="btn {{ (\App\Models\Follow::where(['user_id' => Auth::user()->id ])->get()->count())? 'btn-primary': '' }} btn-edit-perfil">Seguir</button>
+                    </a>
+                @endif
                 <br>
                 <span>{{ $user->biography }}</span>
             </div>

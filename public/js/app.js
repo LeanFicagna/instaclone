@@ -68,6 +68,7 @@ $(document).ready(function () {
 
     $("input#img-user").change(function(event){
         console.log($('form.form-user'));
+        // $(this).preventDefault();
         $('form.form-user').submit();
     })
 

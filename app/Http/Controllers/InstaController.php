@@ -9,6 +9,7 @@ use App\Models\PostLike;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\UploadedFile;
 
 class InstaController extends Controller
 {
@@ -61,7 +62,6 @@ class InstaController extends Controller
 
     public function imgUser(Request $request) {
         $user = User::findOrFail($request->user);
-
         if($request->hasFile('img') && $request->file('img')->isValid()) {
             $requestImg = $request->img;
             $extension = $requestImg->extension();
@@ -71,6 +71,7 @@ class InstaController extends Controller
             $requestImg->move(public_path('img/user_img'), $imgName);
             $user->user_img = $imgName;
         }
+
         $user->save();
 
         return redirect()->back();
@@ -81,7 +82,6 @@ class InstaController extends Controller
         $post = new Post();
         $post->descript = $request->descript;
         $post->user_id = $request->user_id;
-
         if($request->hasFile('img') && $request->file('img')->isValid()) {
             $requestImg = $request->img;
             $extension = $requestImg->extension();

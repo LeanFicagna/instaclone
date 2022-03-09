@@ -29,7 +29,3 @@ Link do projeto hospedado: http://webteste.epizy.com/
 ## 📺Executando
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/64813850/157522859-0797a4c3-71f8-422e-ac00-81722a3d97d1.gif)
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

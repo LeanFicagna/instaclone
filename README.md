@@ -26,7 +26,9 @@ Link do projeto hospedado: http://webteste.epizy.com/
     -   JQuery
     -   Bootstrap
 
-<!-- ## 📱Telas -->
+## 📺Executando
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/64813850/157522859-0797a4c3-71f8-422e-ac00-81722a3d97d1.gif)
 
 ## License
 

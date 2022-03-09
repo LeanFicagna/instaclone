@@ -26,6 +26,8 @@ Link do projeto hospedado: http://webteste.epizy.com/
     -   JQuery
     -   Bootstrap
 
+<!-- ## 📱Telas -->
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

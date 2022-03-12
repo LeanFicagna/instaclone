@@ -6,14 +6,15 @@ Link do projeto hospedado: http://webteste.epizy.com/
 
 ## 📒FUNCIONALIDADES
 
--   [X] Login.
--   [X] Cadastro de usuários.
--   [X] Modificar imagem de perfil.
--   [X] Publicar imagens podendo colocar alguma legenda.
--   [X] Seguir usuários.
--   [X] Ver números de seguidos e números de pessoas que está seguindo.
--   [X] Comentar nas publicações de outros usuários.
--   [X] Ver minhas publicações e também de outros usuários.
+-   [X] Login
+-   [X] Cadastro de usuários
+-   [X] Modificar imagem de perfil
+-   [X] Publicar imagens podendo colocar alguma legenda
+-   [X] Seguir usuários
+-   [X] Ver números de seguidos e números de pessoas que está seguindo
+-   [X] Comentar nas publicações de outros usuários
+-   [X] Ver minhas publicações e também de outros usuários
+-   [X] Buscar usuários
 
 ## 🔨FERRAMENTAS UTILIZADAS
 
